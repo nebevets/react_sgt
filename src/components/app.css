@@ -1,0 +1,11 @@
+li {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-right: 2px solid #039be5;
+}
+li:hover{
+  background-color: aliceblue;
+}
+li:last-child{
+  border-right: none;
+}
