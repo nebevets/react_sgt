@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import StudentRecord from './student_record';
 
 const dataUrl = 'data/student_grades.json';
 
@@ -25,14 +26,7 @@ class Table extends Component{
         <h4 className="center">No student data found.</h4>
       );
     }
-    const tableRows = studentGrades.map((student) =>
-      <tr key={student.id}>
-        <td>{student.id}</td>
-        <td>{student.name}</td>
-        <td>{student.course}</td>
-        <td>{student.grade}</td>
-      </tr>
-    );
+    const tableRows = studentGrades.map((student) => <StudentRecord key={student.id} {...student} />);
     return(
       <table>
         <thead>
