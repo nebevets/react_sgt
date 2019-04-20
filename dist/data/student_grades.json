@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "studentGrades": [
+    {
+      "name": "wayne carr",
+      "grade": 89,
+      "course": "poly-sci",
+      "id": 10101
+    },
+    {
+      "name": "steve benedict",
+      "grade": 100,
+      "course": "react",
+      "id": 10102
+    },
+    {
+      "name": "bill loney",
+      "grade": 54,
+      "course": "basket weaving",
+      "id": 10103
+    },
+    {
+      "name": "teresa green",
+      "grade": 95,
+      "course": "enviromental studies",
+      "id": 10104
+    },
+    {
+      "name": "mary catherine gallagher",
+      "grade": 99,
+      "course": "interpretive dance",
+      "id": 10105
+    }
+  ]
+}
