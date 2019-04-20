@@ -7,12 +7,47 @@ class Table extends Component{
   constructor(props){
     super(props);
     this.state = {
-      studentGrades: []
+      studentGrades: null
     }
   }
   componentDidMount(){
-    console.log('table cpdm');
     this.getStudents();
+  }
+  renderTable = () => {
+    const {studentGrades} = this.state;
+    if(!studentGrades){
+      return(
+        <kbd className="center">Loading student data...</kbd>
+      );
+    }
+    if(!studentGrades.length){
+      return(
+        <h4 className="center">No student data found.</h4>
+      );
+    }
+    const tableRows = studentGrades.map((student) =>
+      <tr key={student.id}>
+        <td>{student.id}</td>
+        <td>{student.name}</td>
+        <td>{student.course}</td>
+        <td>{student.grade}</td>
+      </tr>
+    );
+    return(
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRows}
+        </tbody>
+      </table> 
+    );
   }
   getStudents = () => {
     axios
@@ -30,7 +65,7 @@ class Table extends Component{
       })
   }
   render(){
-    const {studentGrades, error} = this.state;
+    const {error} = this.state;
     if(error){
       return(
         <div className="error">
@@ -41,30 +76,10 @@ class Table extends Component{
         </div>
       );
     }
-    const tableRows = studentGrades.map((student) =>
-      <tr key={student.id}>
-        <td>{student.id}</td>
-        <td>{student.name}</td>
-        <td>{student.course}</td>
-        <td>{student.grade}</td>
-      </tr>
-    );
     return(
       <div>
         <h2 className="center">Student Grade Table</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Course</th>
-              <th>Grade</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableRows}
-          </tbody>
-        </table>  
+        {this.renderTable()} 
       </div>
     );
   }
