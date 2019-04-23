@@ -12,7 +12,7 @@ class Table extends Component{
     }
   }
   componentDidMount(){
-    setTimeout(this.getStudents, 1000);
+    this.getStudents();
   }
   renderTable = () => {
     const {studentGrades} = this.state;

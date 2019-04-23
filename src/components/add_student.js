@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-
-// Build a form for new students with the following inputs:
-//   - name
-//   - course
-//   - grade
-// When submitted console.logs the new student info
+import Input from './input';
 
 class AddStudent extends Component{
   constructor(props){
@@ -39,33 +34,36 @@ class AddStudent extends Component{
     return(
       <form className="center" onSubmit={this.handleSubmit}>
         <h1>Add Student</h1>
-        <label htmlFor="name"></label>
-        <input
-          required
-          onChange={this.handleChange}
-          type="text"
-          name="name"
-          value={name}
-          placeholder="enter name"
-        />
-        <label htmlFor="course"></label>
-        <input
-          required
-          onChange={this.handleChange}
-          type="text"
-          name="course"
-          value={course}
-          placeholder="course description"
-        />
-        <label htmlFor="grade"></label>
-        <input
-          required
-          onChange={this.handleChange}
-          type="number"
-          name="grade"
-          value={grade}
-          placeholder="grade"
-        />
+        <div className="row">
+          <Input
+            onChange={this.handleChange}
+            type="text"
+            id="name"
+            name="name"
+            value={name}
+            labelText="Student Name"
+          />
+        </div>
+        <div className="row">
+          <Input
+            onChange={this.handleChange}
+            type="text"
+            id="course"
+            name="course"
+            value={course}
+            labelText="Course Description"
+          />
+        </div>
+        <div className="row">
+          <Input
+            onChange={this.handleChange}
+            type="number"
+            id="grade"
+            name="grade"
+            value={grade}
+            labelText="Grade"
+          />
+        </div>
         <button className="btn waves-effect waves-light">Enter</button>
         <button className="btn waves-effect waves-light" type="button" onClick={this.handleReset}>Reset</button>
       </form>

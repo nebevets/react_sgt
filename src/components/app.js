@@ -4,6 +4,7 @@ import { NavLink, Route} from 'react-router-dom';
 import Table from './table';
 import AddStudent from './add_student';
 import './app.css';
+import 'materialize-css/dist/js/materialize.min';
 
 const App = () => (
     <div className="container">
