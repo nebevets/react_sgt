@@ -26,8 +26,11 @@ class AddStudent extends Component{
   }
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    const {addStudent, history} = this.props;
+    const {name, grade, course} = this.state;
+    addStudent({name, course, grade: Number(grade)});
     this.handleReset();
+    history.push('/');
   }
   render(){
     const {name, course, grade} = this.state;
@@ -64,8 +67,11 @@ class AddStudent extends Component{
             labelText="Grade"
           />
         </div>
-        <button className="btn waves-effect waves-light">Enter</button>
-        <button className="btn waves-effect waves-light" type="button" onClick={this.handleReset}>Reset</button>
+        
+        <div className="right-align">
+          <button className="btn waves-effect waves-light">Enter</button>
+        </div>
+        
       </form>
     )
   }
