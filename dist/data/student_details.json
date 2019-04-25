@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "10101":
+    {
+      "student": {
+        "fullName": "wayne carr",
+        "phone": "888-555-1212",
+        "email": "emale@hotmale.com"
+      },
+      "classData": {
+        "course": "poly-sci",
+        "description": "the poly of the sci",
+        "instructor": "dr. dooom"
+      },
+      "studentGrade": 89
+    },
+    "10102":
+    {
+      "student": {
+        "fullName": "steve benedict",
+        "phone": "949-111-2121",
+        "email": "sbenedict@hotmail.com"
+      },
+      "classData": {
+        "course": "react",
+        "description": "react, a facebook framework for exposing private data",
+        "instructor": "scott bowler"
+      },
+      "studentGrade": 100
+    },
+    "10103":
+    {
+      "student": {
+        "fullName": "bill loney",
+        "phone": "800-321-4321",
+        "email": "bloney@gmail.com"
+      },
+      "classData": {
+        "course": "basket weaving",
+        "description": "taking reeds and weaving them into baskets, duh",
+        "instructor": "dr. renoir"
+      },
+      "studentGrade": 54
+    },
+    "10104":
+    {
+      "student": {
+        "fullName": "teresa green",
+        "phone": "700-818-4242",
+        "email": "class@component.com"
+      },
+      "classData": {
+        "course": "enviromental studies",
+        "description": "the study of the situation being the enviroment in which one finds themselves",
+        "instructor": "ira eihorn"
+      },
+      "studentGrade": 95
+    },
+    "10105":
+    {
+      "student": {
+        "fullName": "mary catherine gallagher",
+        "phone": "212-888-4040",
+        "email": "maryc@snl.com"
+      },
+      "classData": {
+        "course": "interpretive dance",
+        "description": "sometimes i put my hands under my arms and then smell them like this",
+        "instructor": "will farrell"
+      },
+      "studentGrade": 90
+    }
+}

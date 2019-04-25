@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const StudentRecord = ({name, id, course, grade}) => {
+const StudentRecord = ({name, id, course, grade, seeDetails}) => {
   return(
-    <tr>
+    <tr onClick={seeDetails}>
         <td>{id}</td>
         <td>{name}</td>
         <td>{course}</td>

@@ -1,13 +1,14 @@
 import 'materialize-css/dist/css/materialize.min.css';
 import React, { Component } from 'react';
-import { NavLink, Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Table from './table';
 import AddStudent from './add_student';
 import './app.css';
 import 'materialize-css/dist/js/materialize.min';
 import axios from 'axios';
+import StudentDetails from './student_details';
 
-const dataUrl = 'data/student_grades.json';
+const dataUrl = '/data/student_grades.json';
 
 class App extends Component{
     constructor(props){
@@ -36,37 +37,14 @@ class App extends Component{
               studentGrades
             });
           })
-          .catch(error => {
-            this.setState({
-              error
-            });
-          })
     }
     render(){
-        const {studentGrades, error} = this.state;
-        if(error){
-            return(
-                <div className="row">
-                    <div className="col s12 m5">
-                        {error.message}. The student grades are not available. Please try again later.
-                        <div className="card-panel teal">
-                            {error.config.url}
-                            <div className="white-text">
-                                {error.stack}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
+        const {studentGrades} = this.state;
         return(
             <div className="container">
-                <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/add">Add Student</NavLink></li>
-                </ul>
                 <Route exact path="/" render={(props) => <Table {...props} studentGrades={studentGrades} />} />
                 <Route path="/add" render={(props) => <AddStudent {...props} addStudent={this.addStudent} />} />
+                <Route path="/student-details/:id" component={StudentDetails} />
             </div>
         );
     }
