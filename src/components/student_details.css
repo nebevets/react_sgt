@@ -1,0 +1,20 @@
+.details {
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 5px 10px 0 5px;
+  background-color: aliceblue;
+  text-transform: capitalize;
+}
+.details dt {
+  font-weight: bold;
+  border-bottom: 1px dashed blue;
+}
+.details .email{
+  text-transform: lowercase;
+}
+.details .studentGrade {
+  font-weight: bold;
+  background-color: white;
+  font-size: large;
+  border-radius: 5px;
+}

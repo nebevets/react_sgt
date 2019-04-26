@@ -37,7 +37,7 @@ class AddStudent extends Component{
     const {name, course, grade} = this.state;
     return(
       <form className="center" onSubmit={this.handleSubmit}>
-        <h1>Add Student</h1>
+        <h2>Add Student</h2>
         <NavLink color="blue darken-2" text="View Grade Table" to="/" />
         <div className="row">
           <Input
@@ -71,7 +71,7 @@ class AddStudent extends Component{
         </div>
         
         <div className="right-align">
-          <button className="btn waves-effect waves-light">Enter</button>
+          <button className="btn blue darken-2">Enter</button>
         </div>
         
       </form>

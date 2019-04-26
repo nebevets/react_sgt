@@ -11,5 +11,5 @@ li:last-child{
 }
 tbody tr:hover{
   cursor: pointer;
-  border: 1px solid blue;
+  background-color: lightgray!important;
 }
